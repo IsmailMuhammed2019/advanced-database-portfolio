@@ -34,7 +34,8 @@ Typical questions the system must answer quickly:
 | `Ismail_Muhammed_301904296_Portfolio2_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_Sample_Data.sql` | Insert script for a sample election | Done |
 | `Ismail_Muhammed_301904296_Queries.sql` | Reporting queries used for analysis | Done |
-| `Ismail_Muhammed_301904296_Performance_Analysis.md` | Execution plans, indexes, and findings | Pending |
+| `Ismail_Muhammed_301904296_Optimisation.sql` | Extra indexes for the reporting queries | Done |
+| `Ismail_Muhammed_301904296_Performance_Analysis.md` | Execution plans, indexes, and findings | Done |
 
 ---
 
@@ -69,6 +70,10 @@ Vote lines add up to `valid_votes`, and `valid_votes + rejected_ballots` stays w
 | Q7 | Audit trail for reject / correct / certify actions |
 | Q8 | `EXPLAIN (ANALYZE, BUFFERS)` plans for evidence |
 
-## Next Step
+## Performance notes
 
-Add `Ismail_Muhammed_301904296_Performance_Analysis.md` with execution-plan evidence, targeted indexes, and before/after comparison notes.
+`Ismail_Muhammed_301904296_Performance_Analysis.md` records PostgreSQL 16 plans for the sample election and for a larger temporary copy used only to compare indexes. `Ismail_Muhammed_301904296_Optimisation.sql` adds the extra reporting indexes.
+
+## Status
+
+Portfolio 2 query, data, and performance files are in place. Result screenshots from DBeaver can be added beside this folder as supporting evidence. The next project stage is Portfolio 3 – Transactions and Concurrency.
