@@ -57,21 +57,26 @@ Without a well-designed database, this process risks inconsistent tallies, weak 
 
 ---
 
-## Current Focus: Portfolio 1 – Database Design and Modelling
+## Portfolio Progress
 
-This stage produces the conceptual and logical design for NERMS:
+### Portfolio 1 – Database Design and Modelling
 
-- Case study description (this README)
-- Entity-Relationship (ER) diagram
-- Relational schema
-- Keys and integrity constraints
-- Normalisation explanation
+Completed. The NERMS conceptual and logical design lives in `portfolio-1-database-design/`:
 
-Work for this stage lives in:
+- Entity-Relationship diagram
+- Relational schema with keys and constraints
+- Normalisation explanation (3NF / BCNF)
+
+### Portfolio 2 – Query Processing and Optimisation
+
+Current stage. This work uses the Portfolio 1 schema to load sample election data, run reporting queries, and compare performance before and after indexing.
+
+Work for this stage lives in `portfolio-2-query-optimisation/`.
 
 ```text
 advanced-database-portfolio/
 ├── portfolio-1-database-design/
+├── portfolio-2-query-optimisation/
 └── Ismail_Muhammed_301904296_README.md
 ```
 
