@@ -32,7 +32,7 @@ Typical questions the system must answer quickly:
 | File | Content | Status |
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio2_README.md` | This overview | Done |
-| `Ismail_Muhammed_301904296_Sample_Data.sql` | Insert script for a sample election | Pending |
+| `Ismail_Muhammed_301904296_Sample_Data.sql` | Insert script for a sample election | Done |
 | `Ismail_Muhammed_301904296_Queries.sql` | Reporting queries used for analysis | Pending |
 | `Ismail_Muhammed_301904296_Performance_Analysis.md` | Execution plans, indexes, and findings | Pending |
 
@@ -44,6 +44,18 @@ Run `portfolio-1-database-design/Ismail_Muhammed_301904296_Relational_Schema.sql
 
 ---
 
+## Sample Dataset
+
+The load script creates one House of Representatives election across Lagos, Kano, and Rivers:
+
+- 3 zones, 6 constituencies, 18 polling units
+- 3 parties and 18 candidates
+- 8 officials
+- 18 result returns with matching candidate vote lines
+- A short audit trail (submit, verify, certify, reject, correct)
+
+Vote lines add up to `valid_votes`, and `valid_votes + rejected_ballots` stays within `accredited_voters`.
+
 ## Next Step
 
-Add `Ismail_Muhammed_301904296_Sample_Data.sql` with a complete sample election: zones, constituencies, polling units, parties, candidates, officials, and result returns.
+Add `Ismail_Muhammed_301904296_Queries.sql` with the reporting queries for leading candidates, turnout, pending verification, and party totals.
