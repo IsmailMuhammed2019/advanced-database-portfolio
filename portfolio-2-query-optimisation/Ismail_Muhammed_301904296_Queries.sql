@@ -48,29 +48,38 @@ SELECT
     total_votes
 FROM (
     SELECT
-        z.zone_name,
-        c.constituency_name,
-        cand.full_name AS candidate_name,
-        p.abbreviation AS party,
-        SUM(cv.votes_received) AS total_votes,
+        zone_name,
+        constituency_name,
+        candidate_name,
+        party,
+        total_votes,
         RANK() OVER (
-            PARTITION BY c.constituency_id
-            ORDER BY SUM(cv.votes_received) DESC
+            PARTITION BY constituency_id
+            ORDER BY total_votes DESC
         ) AS vote_rank
-    FROM candidate_vote cv
-    JOIN result_return rr ON rr.return_id = cv.return_id
-    JOIN candidate cand ON cand.candidate_id = cv.candidate_id
-    JOIN party p ON p.party_id = cand.party_id
-    JOIN constituency c ON c.constituency_id = cand.constituency_id
-    JOIN zone z ON z.zone_id = c.zone_id
-    WHERE rr.election_id = 1
-      AND rr.status IN ('VERIFIED', 'CERTIFIED')
-    GROUP BY
-        z.zone_name,
-        c.constituency_id,
-        c.constituency_name,
-        cand.full_name,
-        p.abbreviation
+    FROM (
+        SELECT
+            z.zone_name,
+            c.constituency_id,
+            c.constituency_name,
+            cand.full_name AS candidate_name,
+            p.abbreviation AS party,
+            SUM(cv.votes_received) AS total_votes
+        FROM candidate_vote cv
+        JOIN result_return rr ON rr.return_id = cv.return_id
+        JOIN candidate cand ON cand.candidate_id = cv.candidate_id
+        JOIN party p ON p.party_id = cand.party_id
+        JOIN constituency c ON c.constituency_id = cand.constituency_id
+        JOIN zone z ON z.zone_id = c.zone_id
+        WHERE rr.election_id = 1
+          AND rr.status IN ('VERIFIED', 'CERTIFIED')
+        GROUP BY
+            z.zone_name,
+            c.constituency_id,
+            c.constituency_name,
+            cand.full_name,
+            p.abbreviation
+    ) totals
 ) ranked
 WHERE vote_rank = 1
 ORDER BY zone_name, constituency_name;
