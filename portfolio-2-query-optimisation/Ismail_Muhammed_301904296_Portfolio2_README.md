@@ -33,7 +33,7 @@ Typical questions the system must answer quickly:
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio2_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_Sample_Data.sql` | Insert script for a sample election | Done |
-| `Ismail_Muhammed_301904296_Queries.sql` | Reporting queries used for analysis | Pending |
+| `Ismail_Muhammed_301904296_Queries.sql` | Reporting queries used for analysis | Done |
 | `Ismail_Muhammed_301904296_Performance_Analysis.md` | Execution plans, indexes, and findings | Pending |
 
 ---
@@ -56,6 +56,19 @@ The load script creates one House of Representatives election across Lagos, Kano
 
 Vote lines add up to `valid_votes`, and `valid_votes + rejected_ballots` stays within `accredited_voters`.
 
+## Query Catalogue
+
+| Query | Purpose |
+|-------|---------|
+| Q1 | Candidate standings by constituency |
+| Q2 | Current winner per constituency |
+| Q3 | Turnout by polling unit |
+| Q4 | Returns still waiting for verification |
+| Q5 | National party totals |
+| Q6 | Party vote share within each constituency |
+| Q7 | Audit trail for reject / correct / certify actions |
+| Q8 | `EXPLAIN (ANALYZE, BUFFERS)` plans for evidence |
+
 ## Next Step
 
-Add `Ismail_Muhammed_301904296_Queries.sql` with the reporting queries for leading candidates, turnout, pending verification, and party totals.
+Add `Ismail_Muhammed_301904296_Performance_Analysis.md` with execution-plan evidence, targeted indexes, and before/after comparison notes.
