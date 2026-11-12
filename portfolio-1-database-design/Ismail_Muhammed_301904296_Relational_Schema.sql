@@ -3,38 +3,7 @@
 -- Project : National Election Results Management System
 -- Student : Ismail Muhammed (301904296)
 -- Portfolio: 1 – Database Design and Modelling
--- Engine  : PostgreSQL
 -- =============================================================================
--- HOW TO RUN IN DBEAVER (important):
---   1. Connect to database: nerms
---   2. Open this file
---   3. Use "Execute SQL Script" (Alt+X / Cmd+Option+X),
---      NOT "Execute SQL Statement" (Ctrl+Enter / Cmd+Enter).
---   Ctrl+Enter runs only the statement under the cursor and can cause
---   "relation does not exist" errors if earlier CREATE TABLE lines were skipped.
---
--- This script is idempotent: it can be re-run safely. It drops existing NERMS
--- objects first, then recreates tables and indexes in dependency order.
--- =============================================================================
-
-BEGIN;
-
-SET search_path TO public;
-
--- -----------------------------------------------------------------------------
--- 0. Clean existing objects (child tables first)
--- -----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS audit_log CASCADE;
-DROP TABLE IF EXISTS candidate_vote CASCADE;
-DROP TABLE IF EXISTS result_return CASCADE;
-DROP TABLE IF EXISTS candidate CASCADE;
-DROP TABLE IF EXISTS official CASCADE;
-DROP TABLE IF EXISTS party CASCADE;
-DROP TABLE IF EXISTS polling_unit CASCADE;
-DROP TABLE IF EXISTS constituency CASCADE;
-DROP TABLE IF EXISTS zone CASCADE;
-DROP TABLE IF EXISTS election CASCADE;
 
 -- -----------------------------------------------------------------------------
 -- 1. Geography and election structure
@@ -206,28 +175,11 @@ CREATE TABLE audit_log (
 -- 4. Helpful indexes for common lookups (design-stage starters)
 -- -----------------------------------------------------------------------------
 
-CREATE INDEX IF NOT EXISTS idx_constituency_election
-    ON constituency (election_id);
-
-CREATE INDEX IF NOT EXISTS idx_polling_unit_constituency
-    ON polling_unit (constituency_id);
-
-CREATE INDEX IF NOT EXISTS idx_candidate_election
-    ON candidate (election_id);
-
-CREATE INDEX IF NOT EXISTS idx_result_return_election
-    ON result_return (election_id);
-
-CREATE INDEX IF NOT EXISTS idx_result_return_polling_unit
-    ON result_return (polling_unit_id);
-
-CREATE INDEX IF NOT EXISTS idx_result_return_status
-    ON result_return (status);
-
-CREATE INDEX IF NOT EXISTS idx_candidate_vote_return
-    ON candidate_vote (return_id);
-
-CREATE INDEX IF NOT EXISTS idx_audit_log_return
-    ON audit_log (return_id);
-
-COMMIT;
+CREATE INDEX idx_constituency_election ON constituency (election_id);
+CREATE INDEX idx_polling_unit_constituency ON polling_unit (constituency_id);
+CREATE INDEX idx_candidate_election ON candidate (election_id);
+CREATE INDEX idx_result_return_election ON result_return (election_id);
+CREATE INDEX idx_result_return_polling_unit ON result_return (polling_unit_id);
+CREATE INDEX idx_result_return_status ON result_return (status);
+CREATE INDEX idx_candidate_vote_return ON candidate_vote (return_id);
+CREATE INDEX idx_audit_log_return ON audit_log (return_id);
