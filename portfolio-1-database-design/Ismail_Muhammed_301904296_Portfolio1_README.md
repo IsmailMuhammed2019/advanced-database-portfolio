@@ -24,12 +24,12 @@ Portfolio 1 covers:
 
 ## Planned Files
 
-| File | Content |
-|------|---------|
-| `Ismail_Muhammed_301904296_Portfolio1_README.md` | This overview |
-| `Ismail_Muhammed_301904296_ER_Diagram.md` | Entity-Relationship diagram and relationship notes |
-| `Ismail_Muhammed_301904296_Relational_Schema.sql` | CREATE TABLE script with keys and constraints |
-| `Ismail_Muhammed_301904296_Normalisation.md` | Normalisation explanation |
+| File | Content | Status |
+|------|---------|--------|
+| `Ismail_Muhammed_301904296_Portfolio1_README.md` | This overview | Done |
+| `Ismail_Muhammed_301904296_ER_Diagram.md` | Entity-Relationship diagram and relationship notes | Done |
+| `Ismail_Muhammed_301904296_Relational_Schema.sql` | CREATE TABLE script with keys and constraints | Pending |
+| `Ismail_Muhammed_301904296_Normalisation.md` | Normalisation explanation | Pending |
 
 ---
 
@@ -52,4 +52,4 @@ Portfolio 1 covers:
 
 ## Next Step
 
-Add the ER diagram (`Ismail_Muhammed_301904296_ER_Diagram.md`) showing entities, keys, and relationships for the NERMS domain.
+Add the relational schema (`Ismail_Muhammed_301904296_Relational_Schema.sql`) with tables, keys, and integrity constraints derived from the ER diagram.
