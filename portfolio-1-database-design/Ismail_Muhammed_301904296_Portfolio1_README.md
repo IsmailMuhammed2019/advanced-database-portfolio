@@ -28,7 +28,7 @@ Portfolio 1 covers:
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio1_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_ER_Diagram.md` | Entity-Relationship diagram and relationship notes | Done |
-| `Ismail_Muhammed_301904296_Relational_Schema.sql` | CREATE TABLE script with keys and constraints | Pending |
+| `Ismail_Muhammed_301904296_Relational_Schema.sql` | CREATE TABLE script with keys and constraints | Done |
 | `Ismail_Muhammed_301904296_Normalisation.md` | Normalisation explanation | Pending |
 
 ---
@@ -52,4 +52,4 @@ Portfolio 1 covers:
 
 ## Next Step
 
-Add the relational schema (`Ismail_Muhammed_301904296_Relational_Schema.sql`) with tables, keys, and integrity constraints derived from the ER diagram.
+Add the normalisation explanation (`Ismail_Muhammed_301904296_Normalisation.md`) showing how the schema reaches a suitable normal form.
