@@ -116,6 +116,3 @@ Folder: `portfolio-5-distributed-cloud/`
 
 ---
 
-## Status
-
-The five portfolio folders are complete. The final summary is `Ismail_Muhammed_301904296_Final_Summary.md`.
