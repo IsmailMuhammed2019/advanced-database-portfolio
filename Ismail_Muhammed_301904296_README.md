@@ -73,15 +73,20 @@ Completed. Sample election data, reporting queries, execution plans, and extra i
 
 ### Portfolio 3 – Transactions and Concurrency
 
-Current stage. This work uses the same NERMS database to commit a valid result update, roll back an invalid one, and show how isolation and locking behave when two officers touch the same return.
+Completed. Commit, rollback, isolation, and row-lock evidence lives in `portfolio-3-transactions-concurrency/`.
 
-Work for this stage lives in `portfolio-3-transactions-concurrency/`.
+### Portfolio 4 – NoSQL and Advanced Data Models
+
+Current stage. The same House election is modelled as documents so a polling-unit return, its candidate votes, and its audit notes can be stored and read as one nested record.
+
+Work for this stage lives in `portfolio-4-nosql/`.
 
 ```text
 advanced-database-portfolio/
 ├── portfolio-1-database-design/
 ├── portfolio-2-query-optimisation/
 ├── portfolio-3-transactions-concurrency/
+├── portfolio-4-nosql/
 └── Ismail_Muhammed_301904296_README.md
 ```
 
