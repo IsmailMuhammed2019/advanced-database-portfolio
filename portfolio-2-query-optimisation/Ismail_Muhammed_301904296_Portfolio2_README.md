@@ -32,9 +32,10 @@ Typical questions the system must answer quickly:
 | File | Content | Status |
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio2_README.md` | This overview | Done |
-| `Ismail_Muhammed_301904296_Sample_Data.sql` | Insert script for a sample election | Pending |
-| `Ismail_Muhammed_301904296_Queries.sql` | Reporting queries used for analysis | Pending |
-| `Ismail_Muhammed_301904296_Performance_Analysis.md` | Execution plans, indexes, and findings | Pending |
+| `Ismail_Muhammed_301904296_Sample_Data.sql` | Insert script for a sample election | Done |
+| `Ismail_Muhammed_301904296_Queries.sql` | Reporting queries used for analysis | Done |
+| `Ismail_Muhammed_301904296_Optimisation.sql` | Extra indexes for the reporting queries | Done |
+| `Ismail_Muhammed_301904296_Performance_Analysis.md` | Execution plans, indexes, and findings | Done |
 
 ---
 
@@ -44,6 +45,35 @@ Run `portfolio-1-database-design/Ismail_Muhammed_301904296_Relational_Schema.sql
 
 ---
 
-## Next Step
+## Sample Dataset
 
-Add `Ismail_Muhammed_301904296_Sample_Data.sql` with a complete sample election: zones, constituencies, polling units, parties, candidates, officials, and result returns.
+The load script creates one House of Representatives election across Lagos, Kano, and Rivers:
+
+- 3 zones, 6 constituencies, 18 polling units
+- 3 parties and 18 candidates
+- 8 officials
+- 18 result returns with matching candidate vote lines
+- A short audit trail (submit, verify, certify, reject, correct)
+
+Vote lines add up to `valid_votes`, and `valid_votes + rejected_ballots` stays within `accredited_voters`.
+
+## Query Catalogue
+
+| Query | Purpose |
+|-------|---------|
+| Q1 | Candidate standings by constituency |
+| Q2 | Current winner per constituency |
+| Q3 | Turnout by polling unit |
+| Q4 | Returns still waiting for verification |
+| Q5 | National party totals |
+| Q6 | Party vote share within each constituency |
+| Q7 | Audit trail for reject / correct / certify actions |
+| Q8 | `EXPLAIN (ANALYZE, BUFFERS)` plans for evidence |
+
+## Performance notes
+
+`Ismail_Muhammed_301904296_Performance_Analysis.md` records PostgreSQL 16 plans for the sample election and for a larger temporary copy used only to compare indexes. `Ismail_Muhammed_301904296_Optimisation.sql` adds the extra reporting indexes.
+
+## Status
+
+Portfolio 2 query, data, and performance files are in place. Result screenshots from DBeaver can be added beside this folder as supporting evidence. The next project stage is Portfolio 3 – Transactions and Concurrency.
