@@ -17,7 +17,7 @@ This stage uses the existing `nerms` database to demonstrate that behaviour.
 
 1. **Commit** – verify a submitted return and write the matching audit row in one transaction
 2. **Rollback** – attempt an update that breaks the vote check, then show the return is unchanged
-3. **Isolation** – read the same return under two isolation levels while another transaction has not committed
+3. **Isolation** – read a return under read committed while another transaction has not committed
 4. **Concurrency control** – two sessions try to verify the same return; the second waits or fails instead of overwriting the first
 
 ---
@@ -29,7 +29,7 @@ This stage uses the existing `nerms` database to demonstrate that behaviour.
 | `Ismail_Muhammed_301904296_Portfolio3_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_Transactions.sql` | Commit and rollback scripts | Done |
 | `Ismail_Muhammed_301904296_Concurrency.sql` | Isolation and locking scripts for two sessions | Done |
-| `Ismail_Muhammed_301904296_Transaction_Notes.md` | What each run showed and why | Pending |
+| `Ismail_Muhammed_301904296_Transaction_Notes.md` | What each run showed and why | Done |
 
 ---
 
@@ -47,6 +47,10 @@ The `nerms` database should already contain the Portfolio 1 schema and the Portf
 
 `Ismail_Muhammed_301904296_Concurrency.sql` is run in two DBeaver editors, each with its own connection and Auto-commit turned off. Session A verifies return 14 and leaves the transaction open. Session B still reads `SUBMITTED` (read committed), then its own verification waits and stops with `lock timeout`. After session A commits, session B sees `VERIFIED` by officer 7.
 
-## Next Step
+## Notes
 
-Add `Ismail_Muhammed_301904296_Transaction_Notes.md` describing the commit, rollback, isolation, and lock results.
+`Ismail_Muhammed_301904296_Transaction_Notes.md` explains the six screenshots: the committed verification, the rolled-back verification, the rejected vote total, the read-committed view, the lock timeout, and the read after commit.
+
+## Status
+
+Portfolio 3 scripts, notes, and screenshots are in place. The next project stage is Portfolio 4 – NoSQL and Advanced Data Models.
