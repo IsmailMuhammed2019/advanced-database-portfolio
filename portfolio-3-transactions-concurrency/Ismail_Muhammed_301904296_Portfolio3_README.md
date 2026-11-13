@@ -27,7 +27,7 @@ This stage uses the existing `nerms` database to demonstrate that behaviour.
 | File | Content | Status |
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio3_README.md` | This overview | Done |
-| `Ismail_Muhammed_301904296_Transactions.sql` | Commit and rollback scripts | Pending |
+| `Ismail_Muhammed_301904296_Transactions.sql` | Commit and rollback scripts | Done |
 | `Ismail_Muhammed_301904296_Concurrency.sql` | Isolation and locking scripts for two sessions | Pending |
 | `Ismail_Muhammed_301904296_Transaction_Notes.md` | What each run showed and why | Pending |
 
@@ -39,6 +39,10 @@ The `nerms` database should already contain the Portfolio 1 schema and the Portf
 
 ---
 
+## Transactions
+
+`Ismail_Muhammed_301904296_Transactions.sql` uses return 6 for a committed verification and return 13 for a rollback. An invalid vote total on return 13 is also rejected by the check constraint and leaves the stored figures unchanged.
+
 ## Next Step
 
-Add `Ismail_Muhammed_301904296_Transactions.sql` with one committed verification and one rolled-back invalid update.
+Add `Ismail_Muhammed_301904296_Concurrency.sql` with an isolation example and a two-session lock on the same result return.
