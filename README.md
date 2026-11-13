@@ -69,14 +69,19 @@ Completed. The NERMS conceptual and logical design lives in `portfolio-1-databas
 
 ### Portfolio 2 – Query Processing and Optimisation
 
-Current stage. This work uses the Portfolio 1 schema to load sample election data, run reporting queries, and compare performance before and after indexing.
+Completed. Sample election data, reporting queries, execution plans, and extra indexes live in `portfolio-2-query-optimisation/`.
 
-Work for this stage lives in `portfolio-2-query-optimisation/`.
+### Portfolio 3 – Transactions and Concurrency
+
+Current stage. This work uses the same NERMS database to commit a valid result update, roll back an invalid one, and show how isolation and locking behave when two officers touch the same return.
+
+Work for this stage lives in `portfolio-3-transactions-concurrency/`.
 
 ```text
 advanced-database-portfolio/
 ├── portfolio-1-database-design/
 ├── portfolio-2-query-optimisation/
+├── portfolio-3-transactions-concurrency/
 └── Ismail_Muhammed_301904296_README.md
 ```
 
