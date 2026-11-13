@@ -45,19 +45,37 @@ The document fits the public result page, because that page wants one unit at a 
 
 Returns are sharded by zone. Lagos, Kano, and Rivers each have a primary for submissions and locks. Certified changes are replicated to a national read replica for the public site. An officer who has just committed `VERIFIED` can still be ahead of a visitor, who sees `SUBMITTED` until the replica applies that commit. Collation must read the primary. The local database `nerms` is the single-node stand-in for one primary. Three cloud regions were not provisioned.
 
-## 7. Reflection
+## 7. Work carried out
 
-The design choice that mattered most was keeping the return header separate from the candidate lines. That made the vote-total check, the aggregation queries, and the later document shape all use the same figures.
+All practical work was run on PostgreSQL 16 in database `nerms`, using DBeaver, except the document queries, which were run with Python against the JSON file.
 
-The practical difficulty was concurrency. One DBeaver editor is one session, so a lock does not block itself. Auto-commit had to be off, and `BEGIN` could not be run twice in an editor that already had a transaction. Return 14 also had to be reset to `SUBMITTED` before the isolation read meant anything. Once those conditions were right, session B saw the old status and then hit the lock timeout. That was the clearest evidence that read committed and row locking do different jobs.
+I first ran `Ismail_Muhammed_301904296_Relational_Schema.sql` with Execute SQL Script. An earlier attempt ran only the statement under the cursor. That statement was `CREATE INDEX` on `audit_log`, and PostgreSQL returned `relation "audit_log" does not exist` because the table had not been created in that partial run. Running the full script, which drops and recreates the tables in dependency order, created all ten tables. I then ran `Ismail_Muhammed_301904296_Sample_Data.sql`. The result tabs were the `setval` calls at the end of the load, confirming one election and the related sequences. The navigator showed the eighteen returns. `Ismail_Muhammed_301904296_Optimisation.sql` added the three reporting indexes.
 
-A second difficulty was the database connection. Port 5432 was later held by a Docker PostgreSQL container. The `nerms` data was still there, but DBeaver had to connect as `postgres` to that server. The earlier scripts were unchanged.
+I ran Q1 to Q7 one statement at a time and saved each result grid. Q8 was `EXPLAIN (ANALYZE, BUFFERS)`. On the eighteen-return sample the planner already chose bitmap index scans, so the clock times were under a millisecond and did not show an improvement. The comparison that did show a change used a temporary larger copy of about 8,000 returns. Adding `candidate_vote(candidate_id)` replaced a sequential scan of 24,054 vote rows. That aggregation moved from 7.094 ms to 5.944 ms. The new index on `(election_id, status)` was ignored. With only one election loaded, `status = 'SUBMITTED'` was already the selective condition, so the existing status index remained the cheaper plan. I recorded that negative result rather than claiming every new index was used.
 
-## 8. AI-use declaration
+For transactions I ran `Ismail_Muhammed_301904296_Transactions.sql` as a script, not line by line, so `BEGIN` and `COMMIT` stayed in one session. The result tab after `COMMIT` showed return 6 as `VERIFIED` by Ngozi Eze, with the audit reason “Portfolio 3: figures agree with candidate totals”. The tab after `ROLLBACK` showed return 13 back at `SUBMITTED` and 470 valid votes. The check-violation tab reported `chk_votes_vs_accredited` when `valid_votes` was set to 500. Those three grids are the commit, rollback, and constraint screenshots.
+
+Concurrency needed two editors because one editor is one session, and a session does not block its own lock. Auto-commit had to be off. Running `BEGIN` again in an editor that already had a transaction produced `There is already a transaction in progress`, so the second run used only the `UPDATE`. The first attempts also failed for a data reason: return 14 was already stored as `VERIFIED`, so the other session could not see `SUBMITTED`. I rolled both editors back, set return 14 to `SUBMITTED` with an empty verifier, and started again. Session A then held an uncommitted verification. Session B’s `SELECT` still showed `SUBMITTED`. Session B’s update for officer 8 waited and failed with `canceling statement due to lock timeout`, and that transaction was rolled back. After session A committed, the next read showed `VERIFIED` and `verified_by` 7. That sequence is the isolation, lock-timeout, and after-commit screenshots.
+
+The document queries were run with `python3 Ismail_Muhammed_301904296_Document_Queries.py`. The output showed Ikeja Ward A Unit 01 as one document, three returns still `SUBMITTED`, and `live:LC-01` as Adewale Bakare (APC) with 560 votes. That output is `Ismail_Muhammed_301904296_Document_Query_Results.png`.
+
+A later connection failure was environmental. Port 5432 was taken by a Docker container named `femrs-postgres`. The NERMS tables were still in that server, with eighteen returns, but DBeaver could connect only as the role `postgres`. Reconnecting with that user restored the same database. The scripts did not need to be rewritten.
+
+## 8. Reflection
+
+Separating the return header from the candidate lines was the decision that held the later work together. The same figures supported the check constraint, the aggregation queries, the nested document, and the live total.
+
+The concurrency exercise was the clearest test of understanding. Read committed and row locking are easy to describe and easy to demonstrate incorrectly. Until the two editors were separate sessions, Auto-commit was off, and return 14 was actually `SUBMITTED`, the second session could not show the behaviour the design claims. Once those conditions were met, the second session saw the old status and then lost its update on the lock. That is the difference between “a change is hidden until commit” and “a second writer must wait”.
+
+The index result taught a related lesson. An index is justified by the predicate and the data volume, not by its presence in the schema. On one election, `(election_id, status)` added nothing. On tens of thousands of vote rows, `candidate_id` changed the plan.
+
+The connection break taught me to separate the server from the schema. The portfolio survived because the tables and rows were still in `nerms`. Only the client login had changed.
+
+## 9. AI-use declaration
 
 Cursor, using the Grok model, was used to draft the repository structure, SQL, JSON documents, query script, and the written notes. The generated schema, sample data, transaction script, and document queries were executed in PostgreSQL and the results were checked against the constraints and the expected rows. Screenshots were taken from those runs in DBeaver and from the Python query output. Where a draft did not match the database, it was corrected before it was kept. Examples are the rejected return, which must not store a verifier, and the winner query, which now ranks the computed total rather than repeating the aggregate. The student remains responsible for the accuracy of the work in this repository.
 
-## 9. References
+## 10. References
 
 PostgreSQL 16 documentation for `EXPLAIN`, transaction isolation, `lock_timeout`, and check constraints: https://www.postgresql.org/docs/16/
 
