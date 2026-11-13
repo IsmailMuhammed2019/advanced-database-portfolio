@@ -32,11 +32,15 @@ The relational schema, transactions, and document publication copy from the earl
 | File | Content | Status |
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio5_README.md` | This overview | Done |
-| `Ismail_Muhammed_301904296_Distribution_Design.md` | Sharding, replication, and the consistency choice for published results | Pending |
+| `Ismail_Muhammed_301904296_Distribution_Design.md` | Sharding, replication, and the consistency choice for published results | Done |
 | `Ismail_Muhammed_301904296_Deployment_Sketch.md` | How the zone primary and the public replica would be deployed | Pending |
 
 ---
 
+## Distribution
+
+`Ismail_Muhammed_301904296_Distribution_Design.md` splits the sample election by zone. Each zone primary accepts returns and holds row locks. The public replica applies committed changes later, so a visitor can still see `SUBMITTED` after an officer has committed `VERIFIED`.
+
 ## Next Step
 
-Add `Ismail_Muhammed_301904296_Distribution_Design.md` with the zone shards, the primary and replica roles, and what a reader sees when replication lags.
+Add `Ismail_Muhammed_301904296_Deployment_Sketch.md` describing where the zone primary and the public replica would run.
