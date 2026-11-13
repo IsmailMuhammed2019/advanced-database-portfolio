@@ -1,0 +1,913 @@
+{
+  "source": "Same 2027 House election as Ismail_Muhammed_301904296_Sample_Data.sql",
+  "model": "document",
+  "election": {
+    "name": "2027 House of Representatives Election",
+    "type": "HOUSE",
+    "date": "2027-02-20",
+    "status": "COLLATING"
+  },
+  "resultReturns": [
+    {
+      "returnId": 1,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Lagos",
+        "code": "LAG"
+      },
+      "constituency": {
+        "name": "Lagos Central",
+        "code": "LC-01"
+      },
+      "pollingUnit": {
+        "name": "Ikeja Ward A Unit 01",
+        "code": "PU-LC-001",
+        "registeredVoters": 620
+      },
+      "submittedBy": "Adaeze Okonkwo",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 450,
+      "validVotes": 420,
+      "rejectedBallots": 10,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:10:00",
+      "verifiedAt": "2027-02-20T18:05:00",
+      "candidateVotes": [
+        {
+          "candidate": "Adewale Bakare",
+          "party": "APC",
+          "votes": 200
+        },
+        {
+          "candidate": "Chioma Nwosu",
+          "party": "PDP",
+          "votes": 140
+        },
+        {
+          "candidate": "Tunde Lawal",
+          "party": "LP",
+          "votes": 80
+        }
+      ],
+      "audit": [
+        {
+          "action": "SUBMIT",
+          "by": "Adaeze Okonkwo",
+          "from": null,
+          "to": "SUBMITTED",
+          "reason": "Initial polling-unit submission",
+          "at": "2027-02-20T16:10:00"
+        },
+        {
+          "action": "VERIFY",
+          "by": "Ngozi Eze",
+          "from": "SUBMITTED",
+          "to": "VERIFIED",
+          "reason": "Figures agree with candidate totals",
+          "at": "2027-02-20T18:05:00"
+        }
+      ]
+    },
+    {
+      "returnId": 2,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Lagos",
+        "code": "LAG"
+      },
+      "constituency": {
+        "name": "Lagos Central",
+        "code": "LC-01"
+      },
+      "pollingUnit": {
+        "name": "Ikeja Ward A Unit 02",
+        "code": "PU-LC-002",
+        "registeredVoters": 580
+      },
+      "submittedBy": "Adaeze Okonkwo",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 430,
+      "validVotes": 400,
+      "rejectedBallots": 8,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:20:00",
+      "verifiedAt": "2027-02-20T18:12:00",
+      "candidateVotes": [
+        {
+          "candidate": "Adewale Bakare",
+          "party": "APC",
+          "votes": 150
+        },
+        {
+          "candidate": "Chioma Nwosu",
+          "party": "PDP",
+          "votes": 160
+        },
+        {
+          "candidate": "Tunde Lawal",
+          "party": "LP",
+          "votes": 90
+        }
+      ],
+      "audit": [
+        {
+          "action": "CORRECT",
+          "by": "Suleiman Bello",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "reason": "Audit note: rejected ballots recounted, totals unchanged",
+          "at": "2027-02-20T20:15:00"
+        }
+      ]
+    },
+    {
+      "returnId": 3,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Lagos",
+        "code": "LAG"
+      },
+      "constituency": {
+        "name": "Lagos Central",
+        "code": "LC-01"
+      },
+      "pollingUnit": {
+        "name": "Yaba Ward B Unit 01",
+        "code": "PU-LC-003",
+        "registeredVoters": 640
+      },
+      "submittedBy": "Adaeze Okonkwo",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 470,
+      "validVotes": 440,
+      "rejectedBallots": 15,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:35:00",
+      "verifiedAt": "2027-02-20T18:20:00",
+      "candidateVotes": [
+        {
+          "candidate": "Adewale Bakare",
+          "party": "APC",
+          "votes": 210
+        },
+        {
+          "candidate": "Chioma Nwosu",
+          "party": "PDP",
+          "votes": 130
+        },
+        {
+          "candidate": "Tunde Lawal",
+          "party": "LP",
+          "votes": 100
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 4,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Lagos",
+        "code": "LAG"
+      },
+      "constituency": {
+        "name": "Lagos East",
+        "code": "LE-01"
+      },
+      "pollingUnit": {
+        "name": "Ikorodu Ward A Unit 01",
+        "code": "PU-LE-001",
+        "registeredVoters": 540
+      },
+      "submittedBy": "Ibrahim Musa",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 390,
+      "validVotes": 360,
+      "rejectedBallots": 12,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:15:00",
+      "verifiedAt": "2027-02-20T18:30:00",
+      "candidateVotes": [
+        {
+          "candidate": "Bisi Adebayo",
+          "party": "APC",
+          "votes": 100
+        },
+        {
+          "candidate": "Kunle Ajayi",
+          "party": "PDP",
+          "votes": 180
+        },
+        {
+          "candidate": "Halima Sanni",
+          "party": "LP",
+          "votes": 80
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 5,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Lagos",
+        "code": "LAG"
+      },
+      "constituency": {
+        "name": "Lagos East",
+        "code": "LE-01"
+      },
+      "pollingUnit": {
+        "name": "Ikorodu Ward A Unit 02",
+        "code": "PU-LE-002",
+        "registeredVoters": 560
+      },
+      "submittedBy": "Ibrahim Musa",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 410,
+      "validVotes": 380,
+      "rejectedBallots": 9,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:40:00",
+      "verifiedAt": "2027-02-20T18:40:00",
+      "candidateVotes": [
+        {
+          "candidate": "Bisi Adebayo",
+          "party": "APC",
+          "votes": 120
+        },
+        {
+          "candidate": "Kunle Ajayi",
+          "party": "PDP",
+          "votes": 150
+        },
+        {
+          "candidate": "Halima Sanni",
+          "party": "LP",
+          "votes": 110
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 6,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Lagos",
+        "code": "LAG"
+      },
+      "constituency": {
+        "name": "Lagos East",
+        "code": "LE-01"
+      },
+      "pollingUnit": {
+        "name": "Epe Ward C Unit 01",
+        "code": "PU-LE-003",
+        "registeredVoters": 500
+      },
+      "submittedBy": "Ibrahim Musa",
+      "verifiedBy": null,
+      "accreditedVoters": 360,
+      "validVotes": 340,
+      "rejectedBallots": 6,
+      "status": "SUBMITTED",
+      "submittedAt": "2027-02-20T17:05:00",
+      "verifiedAt": null,
+      "candidateVotes": [
+        {
+          "candidate": "Bisi Adebayo",
+          "party": "APC",
+          "votes": 90
+        },
+        {
+          "candidate": "Kunle Ajayi",
+          "party": "PDP",
+          "votes": 170
+        },
+        {
+          "candidate": "Halima Sanni",
+          "party": "LP",
+          "votes": 80
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 7,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Kano",
+        "code": "KAN"
+      },
+      "constituency": {
+        "name": "Kano Central",
+        "code": "KC-01"
+      },
+      "pollingUnit": {
+        "name": "Nassarawa Ward A Unit 01",
+        "code": "PU-KC-001",
+        "registeredVoters": 700
+      },
+      "submittedBy": "Funmilayo Adeyemi",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 520,
+      "validVotes": 480,
+      "rejectedBallots": 20,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:05:00",
+      "verifiedAt": "2027-02-20T18:02:00",
+      "candidateVotes": [
+        {
+          "candidate": "Musa Abdullahi",
+          "party": "APC",
+          "votes": 250
+        },
+        {
+          "candidate": "Aisha Danjuma",
+          "party": "PDP",
+          "votes": 140
+        },
+        {
+          "candidate": "Ibrahim Sule",
+          "party": "LP",
+          "votes": 90
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 8,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Kano",
+        "code": "KAN"
+      },
+      "constituency": {
+        "name": "Kano Central",
+        "code": "KC-01"
+      },
+      "pollingUnit": {
+        "name": "Nassarawa Ward A Unit 02",
+        "code": "PU-KC-002",
+        "registeredVoters": 680
+      },
+      "submittedBy": "Funmilayo Adeyemi",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 500,
+      "validVotes": 470,
+      "rejectedBallots": 11,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:25:00",
+      "verifiedAt": "2027-02-20T18:18:00",
+      "candidateVotes": [
+        {
+          "candidate": "Musa Abdullahi",
+          "party": "APC",
+          "votes": 230
+        },
+        {
+          "candidate": "Aisha Danjuma",
+          "party": "PDP",
+          "votes": 150
+        },
+        {
+          "candidate": "Ibrahim Sule",
+          "party": "LP",
+          "votes": 90
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 9,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Kano",
+        "code": "KAN"
+      },
+      "constituency": {
+        "name": "Kano Central",
+        "code": "KC-01"
+      },
+      "pollingUnit": {
+        "name": "Fagge Ward B Unit 01",
+        "code": "PU-KC-003",
+        "registeredVoters": 660
+      },
+      "submittedBy": "Funmilayo Adeyemi",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 480,
+      "validVotes": 450,
+      "rejectedBallots": 14,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:45:00",
+      "verifiedAt": "2027-02-20T18:28:00",
+      "candidateVotes": [
+        {
+          "candidate": "Musa Abdullahi",
+          "party": "APC",
+          "votes": 180
+        },
+        {
+          "candidate": "Aisha Danjuma",
+          "party": "PDP",
+          "votes": 160
+        },
+        {
+          "candidate": "Ibrahim Sule",
+          "party": "LP",
+          "votes": 110
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 10,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Kano",
+        "code": "KAN"
+      },
+      "constituency": {
+        "name": "Kano South",
+        "code": "KS-01"
+      },
+      "pollingUnit": {
+        "name": "Wudil Ward A Unit 01",
+        "code": "PU-KS-001",
+        "registeredVoters": 610
+      },
+      "submittedBy": "Chinedu Okafor",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 440,
+      "validVotes": 410,
+      "rejectedBallots": 10,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:12:00",
+      "verifiedAt": "2027-02-20T18:35:00",
+      "candidateVotes": [
+        {
+          "candidate": "Maryam Usman",
+          "party": "APC",
+          "votes": 140
+        },
+        {
+          "candidate": "Yakubu Garba",
+          "party": "PDP",
+          "votes": 190
+        },
+        {
+          "candidate": "Zainab Bello",
+          "party": "LP",
+          "votes": 80
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 11,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Kano",
+        "code": "KAN"
+      },
+      "constituency": {
+        "name": "Kano South",
+        "code": "KS-01"
+      },
+      "pollingUnit": {
+        "name": "Wudil Ward A Unit 02",
+        "code": "PU-KS-002",
+        "registeredVoters": 630
+      },
+      "submittedBy": "Chinedu Okafor",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 455,
+      "validVotes": 430,
+      "rejectedBallots": 9,
+      "status": "CERTIFIED",
+      "submittedAt": "2027-02-20T16:22:00",
+      "verifiedAt": "2027-02-20T19:10:00",
+      "candidateVotes": [
+        {
+          "candidate": "Maryam Usman",
+          "party": "APC",
+          "votes": 160
+        },
+        {
+          "candidate": "Yakubu Garba",
+          "party": "PDP",
+          "votes": 170
+        },
+        {
+          "candidate": "Zainab Bello",
+          "party": "LP",
+          "votes": 100
+        }
+      ],
+      "audit": [
+        {
+          "action": "CERTIFY",
+          "by": "Ngozi Eze",
+          "from": "VERIFIED",
+          "to": "CERTIFIED",
+          "reason": "Collation accepted for publication",
+          "at": "2027-02-20T19:10:00"
+        }
+      ]
+    },
+    {
+      "returnId": 12,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Kano",
+        "code": "KAN"
+      },
+      "constituency": {
+        "name": "Kano South",
+        "code": "KS-01"
+      },
+      "pollingUnit": {
+        "name": "Gaya Ward C Unit 01",
+        "code": "PU-KS-003",
+        "registeredVoters": 590
+      },
+      "submittedBy": "Chinedu Okafor",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 420,
+      "validVotes": 400,
+      "rejectedBallots": 7,
+      "status": "CERTIFIED",
+      "submittedAt": "2027-02-20T16:50:00",
+      "verifiedAt": "2027-02-20T19:15:00",
+      "candidateVotes": [
+        {
+          "candidate": "Maryam Usman",
+          "party": "APC",
+          "votes": 130
+        },
+        {
+          "candidate": "Yakubu Garba",
+          "party": "PDP",
+          "votes": 180
+        },
+        {
+          "candidate": "Zainab Bello",
+          "party": "LP",
+          "votes": 90
+        }
+      ],
+      "audit": [
+        {
+          "action": "CERTIFY",
+          "by": "Ngozi Eze",
+          "from": "VERIFIED",
+          "to": "CERTIFIED",
+          "reason": "Collation accepted for publication",
+          "at": "2027-02-20T19:15:00"
+        }
+      ]
+    },
+    {
+      "returnId": 13,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Rivers",
+        "code": "RIV"
+      },
+      "constituency": {
+        "name": "Rivers East",
+        "code": "RE-01"
+      },
+      "pollingUnit": {
+        "name": "Port Harcourt Ward A 01",
+        "code": "PU-RE-001",
+        "registeredVoters": 720
+      },
+      "submittedBy": "Amina Yusuf",
+      "verifiedBy": null,
+      "accreditedVoters": 510,
+      "validVotes": 470,
+      "rejectedBallots": 18,
+      "status": "SUBMITTED",
+      "submittedAt": "2027-02-20T17:10:00",
+      "verifiedAt": null,
+      "candidateVotes": [
+        {
+          "candidate": "Tamuno Dokubo",
+          "party": "APC",
+          "votes": 220
+        },
+        {
+          "candidate": "Ibinabo Hart",
+          "party": "PDP",
+          "votes": 150
+        },
+        {
+          "candidate": "Soboma Briggs",
+          "party": "LP",
+          "votes": 100
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 14,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Rivers",
+        "code": "RIV"
+      },
+      "constituency": {
+        "name": "Rivers East",
+        "code": "RE-01"
+      },
+      "pollingUnit": {
+        "name": "Port Harcourt Ward A 02",
+        "code": "PU-RE-002",
+        "registeredVoters": 690
+      },
+      "submittedBy": "Amina Yusuf",
+      "verifiedBy": null,
+      "accreditedVoters": 495,
+      "validVotes": 460,
+      "rejectedBallots": 12,
+      "status": "SUBMITTED",
+      "submittedAt": "2027-02-20T17:20:00",
+      "verifiedAt": null,
+      "candidateVotes": [
+        {
+          "candidate": "Tamuno Dokubo",
+          "party": "APC",
+          "votes": 200
+        },
+        {
+          "candidate": "Ibinabo Hart",
+          "party": "PDP",
+          "votes": 160
+        },
+        {
+          "candidate": "Soboma Briggs",
+          "party": "LP",
+          "votes": 100
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 15,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Rivers",
+        "code": "RIV"
+      },
+      "constituency": {
+        "name": "Rivers East",
+        "code": "RE-01"
+      },
+      "pollingUnit": {
+        "name": "Obio-Akpor Ward B 01",
+        "code": "PU-RE-003",
+        "registeredVoters": 650
+      },
+      "submittedBy": "Amina Yusuf",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 470,
+      "validVotes": 440,
+      "rejectedBallots": 8,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:55:00",
+      "verifiedAt": "2027-02-20T18:50:00",
+      "candidateVotes": [
+        {
+          "candidate": "Tamuno Dokubo",
+          "party": "APC",
+          "votes": 190
+        },
+        {
+          "candidate": "Ibinabo Hart",
+          "party": "PDP",
+          "votes": 140
+        },
+        {
+          "candidate": "Soboma Briggs",
+          "party": "LP",
+          "votes": 110
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 16,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Rivers",
+        "code": "RIV"
+      },
+      "constituency": {
+        "name": "Rivers West",
+        "code": "RW-01"
+      },
+      "pollingUnit": {
+        "name": "Ahoada Ward A Unit 01",
+        "code": "PU-RW-001",
+        "registeredVoters": 520
+      },
+      "submittedBy": "Tamuno Briggs",
+      "verifiedBy": null,
+      "accreditedVoters": 380,
+      "validVotes": 350,
+      "rejectedBallots": 5,
+      "status": "REJECTED",
+      "submittedAt": "2027-02-20T16:30:00",
+      "verifiedAt": null,
+      "candidateVotes": [
+        {
+          "candidate": "Preye Okoro",
+          "party": "APC",
+          "votes": 80
+        },
+        {
+          "candidate": "Ebi Johnbull",
+          "party": "PDP",
+          "votes": 200
+        },
+        {
+          "candidate": "Datubo Amakiri",
+          "party": "LP",
+          "votes": 70
+        }
+      ],
+      "audit": [
+        {
+          "action": "REJECT",
+          "by": "Ngozi Eze",
+          "from": "SUBMITTED",
+          "to": "REJECTED",
+          "reason": "Signed ballot account does not match the submitted totals",
+          "at": "2027-02-20T19:00:00"
+        }
+      ]
+    },
+    {
+      "returnId": 17,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Rivers",
+        "code": "RIV"
+      },
+      "constituency": {
+        "name": "Rivers West",
+        "code": "RW-01"
+      },
+      "pollingUnit": {
+        "name": "Ahoada Ward A Unit 02",
+        "code": "PU-RW-002",
+        "registeredVoters": 540
+      },
+      "submittedBy": "Tamuno Briggs",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 400,
+      "validVotes": 370,
+      "rejectedBallots": 10,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T16:48:00",
+      "verifiedAt": "2027-02-20T18:55:00",
+      "candidateVotes": [
+        {
+          "candidate": "Preye Okoro",
+          "party": "APC",
+          "votes": 90
+        },
+        {
+          "candidate": "Ebi Johnbull",
+          "party": "PDP",
+          "votes": 190
+        },
+        {
+          "candidate": "Datubo Amakiri",
+          "party": "LP",
+          "votes": 90
+        }
+      ],
+      "audit": []
+    },
+    {
+      "returnId": 18,
+      "election": "2027 House of Representatives Election",
+      "zone": {
+        "name": "Rivers",
+        "code": "RIV"
+      },
+      "constituency": {
+        "name": "Rivers West",
+        "code": "RW-01"
+      },
+      "pollingUnit": {
+        "name": "Degema Ward C Unit 01",
+        "code": "PU-RW-003",
+        "registeredVoters": 560
+      },
+      "submittedBy": "Tamuno Briggs",
+      "verifiedBy": "Ngozi Eze",
+      "accreditedVoters": 415,
+      "validVotes": 390,
+      "rejectedBallots": 11,
+      "status": "VERIFIED",
+      "submittedAt": "2027-02-20T17:00:00",
+      "verifiedAt": "2027-02-20T19:05:00",
+      "candidateVotes": [
+        {
+          "candidate": "Preye Okoro",
+          "party": "APC",
+          "votes": 100
+        },
+        {
+          "candidate": "Ebi Johnbull",
+          "party": "PDP",
+          "votes": 180
+        },
+        {
+          "candidate": "Datubo Amakiri",
+          "party": "LP",
+          "votes": 110
+        }
+      ],
+      "audit": []
+    }
+  ],
+  "liveTotals": [
+    {
+      "key": "live:LC-01",
+      "constituencyCode": "LC-01",
+      "constituencyName": "Lagos Central",
+      "leader": "Adewale Bakare",
+      "party": "APC",
+      "votes": 560,
+      "countedStatuses": [
+        "VERIFIED",
+        "CERTIFIED"
+      ]
+    },
+    {
+      "key": "live:LE-01",
+      "constituencyCode": "LE-01",
+      "constituencyName": "Lagos East",
+      "leader": "Kunle Ajayi",
+      "party": "PDP",
+      "votes": 330,
+      "countedStatuses": [
+        "VERIFIED",
+        "CERTIFIED"
+      ]
+    },
+    {
+      "key": "live:KC-01",
+      "constituencyCode": "KC-01",
+      "constituencyName": "Kano Central",
+      "leader": "Musa Abdullahi",
+      "party": "APC",
+      "votes": 660,
+      "countedStatuses": [
+        "VERIFIED",
+        "CERTIFIED"
+      ]
+    },
+    {
+      "key": "live:KS-01",
+      "constituencyCode": "KS-01",
+      "constituencyName": "Kano South",
+      "leader": "Yakubu Garba",
+      "party": "PDP",
+      "votes": 540,
+      "countedStatuses": [
+        "VERIFIED",
+        "CERTIFIED"
+      ]
+    },
+    {
+      "key": "live:RE-01",
+      "constituencyCode": "RE-01",
+      "constituencyName": "Rivers East",
+      "leader": "Tamuno Dokubo",
+      "party": "APC",
+      "votes": 190,
+      "countedStatuses": [
+        "VERIFIED",
+        "CERTIFIED"
+      ]
+    },
+    {
+      "key": "live:RW-01",
+      "constituencyCode": "RW-01",
+      "constituencyName": "Rivers West",
+      "leader": "Ebi Johnbull",
+      "party": "PDP",
+      "votes": 370,
+      "countedStatuses": [
+        "VERIFIED",
+        "CERTIFIED"
+      ]
+    }
+  ]
+}

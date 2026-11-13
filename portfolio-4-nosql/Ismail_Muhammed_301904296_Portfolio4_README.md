@@ -32,12 +32,16 @@ A key-value record is also shown for the live constituency total, where the key 
 | File | Content | Status |
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio4_README.md` | This overview | Done |
-| `Ismail_Muhammed_301904296_Result_Documents.json` | Sample result documents and one live-total record | Pending |
+| `Ismail_Muhammed_301904296_Result_Documents.json` | Sample result documents and one live-total record | Done |
 | `Ismail_Muhammed_301904296_Document_Queries.js` | Queries against the document collection | Pending |
 | `Ismail_Muhammed_301904296_NoSQL_Suitability.md` | Why this model fits NERMS, and where the relational schema remains the better store | Pending |
 
 ---
 
+## Sample Documents
+
+`Ismail_Muhammed_301904296_Result_Documents.json` holds all 18 polling-unit returns from the sample House election. Candidate votes and audit actions sit inside each return. `liveTotals` stores one key-value record per constituency, counted from verified and certified returns only.
+
 ## Next Step
 
-Add `Ismail_Muhammed_301904296_Result_Documents.json` with nested polling-unit returns taken from the sample House election.
+Add `Ismail_Muhammed_301904296_Document_Queries.js` to find a return, list pending units, and read a live constituency total.
