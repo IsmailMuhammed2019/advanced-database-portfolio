@@ -57,33 +57,7 @@ Without a well-designed database, this process risks inconsistent tallies, weak 
 
 ---
 
-## Portfolio Progress
-
-### Portfolio 1 – Database Design and Modelling
-
-Completed. The NERMS conceptual and logical design lives in `portfolio-1-database-design/`:
-
-- Entity-Relationship diagram
-- Relational schema with keys and constraints
-- Normalisation explanation (3NF / BCNF)
-
-### Portfolio 2 – Query Processing and Optimisation
-
-Completed. Sample election data, reporting queries, execution plans, and extra indexes live in `portfolio-2-query-optimisation/`.
-
-### Portfolio 3 – Transactions and Concurrency
-
-Completed. Commit, rollback, isolation, and row-lock evidence lives in `portfolio-3-transactions-concurrency/`.
-
-### Portfolio 4 – NoSQL and Advanced Data Models
-
-Completed. Nested polling-unit documents, document queries, and the suitability note live in `portfolio-4-nosql/`.
-
-### Portfolio 5 – Distributed and Cloud Databases
-
-Completed. Zone sharding, replication lag, and the deployment sketch live in `portfolio-5-distributed-cloud/`.
-
-The five technical portfolios are in place. The remaining piece is the final summary: the case study, the GitHub link, a short reflection, and an AI-use declaration.
+## Repository
 
 ```text
 advanced-database-portfolio/
@@ -92,7 +66,56 @@ advanced-database-portfolio/
 ├── portfolio-3-transactions-concurrency/
 ├── portfolio-4-nosql/
 ├── portfolio-5-distributed-cloud/
+├── README.md
 └── Ismail_Muhammed_301904296_README.md
 ```
 
-Further portfolio stages will be added and reflected in this README as the project progresses.
+The case study throughout is the **2027 House of Representatives Election**, with sample returns from Lagos, Kano, and Rivers.
+
+---
+
+## Portfolio 1 – Database Design and Modelling
+
+Folder: `portfolio-1-database-design/`
+
+- Entity-relationship diagram and the exported diagram image
+- Relational schema with keys, checks, and foreign keys
+- Normalisation explanation through 3NF and BCNF
+
+## Portfolio 2 – Query Processing and Optimisation
+
+Folder: `portfolio-2-query-optimisation/`
+
+- Sample data for 18 polling units
+- Reporting queries for standings, turnout, pending returns, party totals, and the audit trail
+- Extra indexes, execution-plan notes, and the query screenshots
+
+## Portfolio 3 – Transactions and Concurrency
+
+Folder: `portfolio-3-transactions-concurrency/`
+
+- A committed verification of return 6, with its audit row
+- A rollback of return 13, and a vote total rejected by the check constraint
+- A read-committed view, a lock timeout, and the read after commit
+
+## Portfolio 4 – NoSQL and Advanced Data Models
+
+Folder: `portfolio-4-nosql/`
+
+- One document per polling-unit return, with votes and audit notes nested inside it
+- A live constituency total read by key
+- Query script, result screenshot, and the note on where documents fit and where PostgreSQL remains the system of record
+
+## Portfolio 5 – Distributed and Cloud Databases
+
+Folder: `portfolio-5-distributed-cloud/`
+
+- Shard by zone: Lagos, Kano, and Rivers
+- A zone primary for collation and a public replica that can lag
+- A deployment sketch. The local `nerms` database is the stand-in for one zone primary
+
+---
+
+## Status
+
+The five portfolio folders are complete. The remaining piece is the final summary: this case study, the GitHub link, a short reflection, and an AI-use declaration.
