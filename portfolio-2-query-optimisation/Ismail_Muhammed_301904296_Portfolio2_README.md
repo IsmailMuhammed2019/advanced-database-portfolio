@@ -70,10 +70,25 @@ Vote lines add up to `valid_votes`, and `valid_votes + rejected_ballots` stays w
 | Q7 | Audit trail for reject / correct / certify actions |
 | Q8 | `EXPLAIN (ANALYZE, BUFFERS)` plans for evidence |
 
+## Screenshots
+
+Each image is the result grid or plan from one query run:
+
+| Screenshot | Purpose |
+|---|---|
+| `Ismail_Muhammed_301904296_Q1_Leading_candidate.png` | Candidate standings from the aggregation query |
+| `Ismail_Muhammed_301904296_Q2_Winner.png` | One leading candidate in each constituency |
+| `Ismail_Muhammed_301904296_Q3_Turn_Out.png` | Accredited voters compared with the registered roll |
+| `Ismail_Muhammed_301904296_Q4_RWaiting_Verification.png` | Returns still waiting to be verified |
+| `Ismail_Muhammed_301904296_Q5_Party_Totals.png` | National party totals from verified and certified returns |
+| `Ismail_Muhammed_301904296_Q6_Vote_Sharing.png` | Party share inside each constituency |
+| `Ismail_Muhammed_301904296_Q7_Audit_Trails.png` | Reject, correct, and certify actions kept in the audit log |
+| `Ismail_Muhammed_301904296_Q8_Querry_Plan.png` | Execution plan behind the index discussion |
+
 ## Performance notes
 
 `Ismail_Muhammed_301904296_Performance_Analysis.md` records PostgreSQL 16 plans for the sample election and for a larger temporary copy used only to compare indexes. `Ismail_Muhammed_301904296_Optimisation.sql` adds the extra reporting indexes.
 
 ## Status
 
-Portfolio 2 query, data, and performance files are in place. Result screenshots from DBeaver can be added beside this folder as supporting evidence. The next project stage is Portfolio 3 – Transactions and Concurrency.
+Portfolio 2 query, data, performance notes, and result screenshots are in place. The next project stage is Portfolio 3 – Transactions and Concurrency.

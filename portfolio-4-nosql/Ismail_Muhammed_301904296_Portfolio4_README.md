@@ -50,6 +50,10 @@ A key-value record is also shown for the live constituency total, where the key 
 python3 Ismail_Muhammed_301904296_Document_Queries.py
 ```
 
+## Screenshot
+
+`Ismail_Muhammed_301904296_Document_Query_Results.png` is the terminal output of the three queries. Its purpose is to show one return document, the returns still `SUBMITTED`, and the live `LC-01` total from the same run.
+
 ## Suitability
 
 `Ismail_Muhammed_301904296_NoSQL_Suitability.md` explains why a polling-unit document and a live-total key fit the results screen, and why PostgreSQL remains the store for checks, commits, and locks.

@@ -78,33 +78,40 @@ The case study throughout is the **2027 House of Representatives Election**, wit
 
 Folder: `portfolio-1-database-design/`
 
-- Entity-relationship diagram and the exported diagram image
-- Relational schema with keys, checks, and foreign keys
-- Normalisation explanation through 3NF and BCNF
+- Entity-relationship diagram, relational schema, and normalisation through 3NF and BCNF
+- `Ismail_Muhammed_301904296_ER_Diagram.png` shows the tables and foreign keys created from that schema
 
 ## Portfolio 2 – Query Processing and Optimisation
 
 Folder: `portfolio-2-query-optimisation/`
 
-- Sample data for 18 polling units
-- Reporting queries for standings, turnout, pending returns, party totals, and the audit trail
-- Extra indexes, execution-plan notes, and the query screenshots
+- Sample data for 18 polling units, the reporting queries, and the extra indexes
+- `Ismail_Muhammed_301904296_Q1_Leading_candidate.png` shows the candidate standings
+- `Ismail_Muhammed_301904296_Q2_Winner.png` shows one leader in each constituency
+- `Ismail_Muhammed_301904296_Q3_Turn_Out.png` shows accredited voters against the registered roll
+- `Ismail_Muhammed_301904296_Q4_RWaiting_Verification.png` shows returns still `SUBMITTED`
+- `Ismail_Muhammed_301904296_Q5_Party_Totals.png` shows national party totals from verified and certified returns
+- `Ismail_Muhammed_301904296_Q6_Vote_Sharing.png` shows each party’s share inside a constituency
+- `Ismail_Muhammed_301904296_Q7_Audit_Trails.png` shows the reject, correct, and certify trail
+- `Ismail_Muhammed_301904296_Q8_Querry_Plan.png` shows the execution plan behind the index discussion
 
 ## Portfolio 3 – Transactions and Concurrency
 
 Folder: `portfolio-3-transactions-concurrency/`
 
-- A committed verification of return 6, with its audit row
-- A rollback of return 13, and a vote total rejected by the check constraint
-- A read-committed view, a lock timeout, and the read after commit
+- `Ismail_Muhammed_301904296_Commit_Return6.png` shows the verification and audit row saved by one commit
+- `Ismail_Muhammed_301904296_Rollback_Return13.png` shows the uncommitted verification discarded
+- `Ismail_Muhammed_301904296_Constraint_Rollback.png` shows the check constraint rejecting an illegal vote total
+- `Ismail_Muhammed_301904296_Isolation_Read.png` shows the second session still reading `SUBMITTED` before commit
+- `Ismail_Muhammed_301904296_Lock_Timeout.png` shows the second update cancelled because the row is locked
+- `Ismail_Muhammed_301904296_After_Commit.png` shows the other session reading `VERIFIED` only after commit
 
 ## Portfolio 4 – NoSQL and Advanced Data Models
 
 Folder: `portfolio-4-nosql/`
 
-- One document per polling-unit return, with votes and audit notes nested inside it
-- A live constituency total read by key
-- Query script, result screenshot, and the note on where documents fit and where PostgreSQL remains the system of record
+- One document per polling-unit return, a live constituency total, and the suitability note
+- `Ismail_Muhammed_301904296_Document_Query_Results.png` shows one return document, the pending queue, and the live `LC-01` total from one run
 
 ## Portfolio 5 – Distributed and Cloud Databases
 
@@ -113,31 +120,5 @@ Folder: `portfolio-5-distributed-cloud/`
 - Shard by zone: Lagos, Kano, and Rivers
 - A zone primary for collation and a public replica that can lag
 - A deployment sketch. The local `nerms` database is the stand-in for one zone primary
-
-Portfolio 5 has no screenshot. It is a design, and three cloud regions were not provisioned.
-
----
-
-## Screenshots
-
-Each image is evidence of a run. The purpose is the result that image is there to prove.
-
-| Screenshot | Purpose |
-|---|---|
-| `portfolio-1-database-design/Ismail_Muhammed_301904296_ER_Diagram.png` | Confirms the tables and foreign keys created from the schema. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q1_Leading_candidate.png` | Candidate standings from the aggregation query. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q2_Winner.png` | One leading candidate in each constituency. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q3_Turn_Out.png` | Accredited voters compared with the registered roll. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q4_RWaiting_Verification.png` | Returns still waiting to be verified. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q5_Party_Totals.png` | National party totals from verified and certified returns. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q6_Vote_Sharing.png` | Party share inside each constituency. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q7_Audit_Trails.png` | Reject, correct, and certify actions kept in the audit log. |
-| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q8_Querry_Plan.png` | Execution plan behind the index discussion. |
-| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Commit_Return6.png` | Verification and audit row saved by one commit. |
-| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Rollback_Return13.png` | Uncommitted verification discarded. |
-| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Constraint_Rollback.png` | Illegal vote total rejected by the check constraint. |
-| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Isolation_Read.png` | Second session still sees `SUBMITTED` before the first session commits. |
-| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Lock_Timeout.png` | Second update cancelled because the row is locked. |
-| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_After_Commit.png` | The other session sees `VERIFIED` only after commit. |
-| `portfolio-4-nosql/Ismail_Muhammed_301904296_Document_Query_Results.png` | One return document, the pending queue, and the live constituency total. |
+- No screenshot. Three cloud regions were not provisioned, so a console image would not be evidence of a deployment
 

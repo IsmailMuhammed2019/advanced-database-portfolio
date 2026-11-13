@@ -28,6 +28,7 @@ Portfolio 1 covers:
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio1_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_ER_Diagram.md` | Entity-Relationship diagram and relationship notes | Done |
+| `Ismail_Muhammed_301904296_ER_Diagram.png` | Exported diagram of the implemented tables and foreign keys | Done |
 | `Ismail_Muhammed_301904296_Relational_Schema.sql` | CREATE TABLE script with keys and constraints | Done |
 | `Ismail_Muhammed_301904296_Normalisation.md` | Normalisation explanation | Done |
 
@@ -49,6 +50,10 @@ Portfolio 1 covers:
 | `AuditLog` | History of corrections and status changes on returns |
 
 ---
+
+## Screenshot
+
+`Ismail_Muhammed_301904296_ER_Diagram.png` is the diagram produced from the relational schema. Its purpose is to show the tables and foreign keys that were implemented, alongside the written model in `Ismail_Muhammed_301904296_ER_Diagram.md`.
 
 ## Status
 

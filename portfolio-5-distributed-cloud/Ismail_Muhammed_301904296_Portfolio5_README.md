@@ -45,6 +45,10 @@ The relational schema, transactions, and document publication copy from the earl
 
 `Ismail_Muhammed_301904296_Deployment_Sketch.md` places a PostgreSQL primary in each zone and a read-only replica in the national region. The local `nerms` database used for this portfolio is the single-node stand-in for one of those primaries.
 
+## Screenshots
+
+This portfolio has no screenshot. The work is a design of zone primaries and a public replica. Three cloud regions were not provisioned, so a console image would not be evidence of a deployment. The local `nerms` database stands in for one zone primary.
+
 ## Status
 
 Portfolio 5 design and deployment notes are in place. The remaining assessment piece is the final 2–3 page summary, with the GitHub link, a short reflection, and an AI-use declaration.

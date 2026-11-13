@@ -47,9 +47,18 @@ The `nerms` database should already contain the Portfolio 1 schema and the Portf
 
 `Ismail_Muhammed_301904296_Concurrency.sql` is run in two DBeaver editors, each with its own connection and Auto-commit turned off. Session A verifies return 14 and leaves the transaction open. Session B still reads `SUBMITTED` (read committed), then its own verification waits and stops with `lock timeout`. After session A commits, session B sees `VERIFIED` by officer 7.
 
-## Notes
+## Screenshots
 
-`Ismail_Muhammed_301904296_Transaction_Notes.md` explains the six screenshots: the committed verification, the rolled-back verification, the rejected vote total, the read-committed view, the lock timeout, and the read after commit.
+`Ismail_Muhammed_301904296_Transaction_Notes.md` explains each run. The image beside that note is the evidence:
+
+| Screenshot | Purpose |
+|---|---|
+| `Ismail_Muhammed_301904296_Commit_Return6.png` | Verification and audit row saved by one commit |
+| `Ismail_Muhammed_301904296_Rollback_Return13.png` | Uncommitted verification discarded |
+| `Ismail_Muhammed_301904296_Constraint_Rollback.png` | Illegal vote total rejected by the check constraint |
+| `Ismail_Muhammed_301904296_Isolation_Read.png` | Second session still sees `SUBMITTED` before the first session commits |
+| `Ismail_Muhammed_301904296_Lock_Timeout.png` | Second update cancelled because the row is locked |
+| `Ismail_Muhammed_301904296_After_Commit.png` | The other session sees `VERIFIED` only after commit |
 
 ## Status
 
