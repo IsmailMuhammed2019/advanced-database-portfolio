@@ -28,7 +28,7 @@ This stage uses the existing `nerms` database to demonstrate that behaviour.
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio3_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_Transactions.sql` | Commit and rollback scripts | Done |
-| `Ismail_Muhammed_301904296_Concurrency.sql` | Isolation and locking scripts for two sessions | Pending |
+| `Ismail_Muhammed_301904296_Concurrency.sql` | Isolation and locking scripts for two sessions | Done |
 | `Ismail_Muhammed_301904296_Transaction_Notes.md` | What each run showed and why | Pending |
 
 ---
@@ -43,6 +43,10 @@ The `nerms` database should already contain the Portfolio 1 schema and the Portf
 
 `Ismail_Muhammed_301904296_Transactions.sql` uses return 6 for a committed verification and return 13 for a rollback. An invalid vote total on return 13 is also rejected by the check constraint and leaves the stored figures unchanged.
 
+## Concurrency
+
+`Ismail_Muhammed_301904296_Concurrency.sql` is run in two DBeaver editors, each with its own connection and Auto-commit turned off. Session A verifies return 14 and leaves the transaction open. Session B still reads `SUBMITTED` (read committed), then its own verification waits and stops with `lock timeout`. After session A commits, session B sees `VERIFIED` by officer 7.
+
 ## Next Step
 
-Add `Ismail_Muhammed_301904296_Concurrency.sql` with an isolation example and a two-session lock on the same result return.
+Add `Ismail_Muhammed_301904296_Transaction_Notes.md` describing the commit, rollback, isolation, and lock results.
