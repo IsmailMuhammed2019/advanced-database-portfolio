@@ -120,5 +120,5 @@ Folder: `portfolio-5-distributed-cloud/`
 - Shard by zone: Lagos, Kano, and Rivers
 - A zone primary for collation and a public replica that can lag
 - A deployment sketch. The local `nerms` database is the stand-in for one zone primary
-- No screenshot. Three cloud regions were not provisioned, so a console image would not be evidence of a deployment
+
 

@@ -63,7 +63,7 @@ The document fits the public result page, because that page wants one unit at a 
 
 ## 6. Portfolio 5 – Distribution
 
-Returns are sharded by zone. Lagos, Kano, and Rivers each have a primary for submissions and locks. Certified changes are replicated to a national read replica for the public site. An officer who has just committed `VERIFIED` can still be ahead of a visitor, who sees `SUBMITTED` until the replica applies that commit. Collation must read the primary. The local database `nerms` is the single-node stand-in for one primary. This portfolio has no screenshot. Three cloud regions were not created, so a console image would not be evidence of a deployment.
+Returns are sharded by zone. Lagos, Kano, and Rivers each have a primary for submissions and locks. Certified changes are replicated to a national read replica for the public site. An officer who has just committed `VERIFIED` can still be ahead of a visitor, who sees `SUBMITTED` until the replica applies that commit. Collation must read the primary. The local database `nerms` is the single-node stand-in for one primary. .
 
 ## 7. Work carried out
 
