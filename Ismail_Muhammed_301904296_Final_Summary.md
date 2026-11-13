@@ -45,7 +45,32 @@ The document fits the public result page, because that page wants one unit at a 
 
 Returns are sharded by zone. Lagos, Kano, and Rivers each have a primary for submissions and locks. Certified changes are replicated to a national read replica for the public site. An officer who has just committed `VERIFIED` can still be ahead of a visitor, who sees `SUBMITTED` until the replica applies that commit. Collation must read the primary. The local database `nerms` is the single-node stand-in for one primary. Three cloud regions were not provisioned.
 
-## 7. Work carried out
+## 7. Purpose of the screenshots
+
+The images are the evidence that the scripts were executed. Each one is kept because it shows a result that the written note alone cannot prove.
+
+| Screenshot | Purpose |
+|---|---|
+| `Ismail_Muhammed_301904296_ER_Diagram.png` | Shows the implemented tables and foreign keys, not only the drawn model. |
+| `Ismail_Muhammed_301904296_Q1_Leading_candidate.png` | Shows the candidate standings produced by the aggregation query. |
+| `Ismail_Muhammed_301904296_Q2_Winner.png` | Shows that the ranking returns one leader for each constituency. |
+| `Ismail_Muhammed_301904296_Q3_Turn_Out.png` | Shows accredited voters set against the registered roll. |
+| `Ismail_Muhammed_301904296_Q4_RWaiting_Verification.png` | Shows the operational queue of returns still `SUBMITTED`. |
+| `Ismail_Muhammed_301904296_Q5_Party_Totals.png` | Shows national party totals from verified and certified returns. |
+| `Ismail_Muhammed_301904296_Q6_Vote_Sharing.png` | Shows each party’s share inside a constituency. |
+| `Ismail_Muhammed_301904296_Q7_Audit_Trails.png` | Shows that reject, correct, and certify actions remain traceable. |
+| `Ismail_Muhammed_301904296_Q8_Querry_Plan.png` | Shows the execution plan, so the index discussion is tied to a real `EXPLAIN` output. |
+| `Ismail_Muhammed_301904296_Commit_Return6.png` | Shows that the verification and the audit row were both saved by one commit. |
+| `Ismail_Muhammed_301904296_Rollback_Return13.png` | Shows that an uncommitted verification was discarded and the row returned to `SUBMITTED`. |
+| `Ismail_Muhammed_301904296_Constraint_Rollback.png` | Shows the check constraint rejecting an illegal vote total. |
+| `Ismail_Muhammed_301904296_Isolation_Read.png` | Shows that a second session still reads `SUBMITTED` while the first session has not committed. |
+| `Ismail_Muhammed_301904296_Lock_Timeout.png` | Shows that the second update was cancelled rather than overwriting the locked row. |
+| `Ismail_Muhammed_301904296_After_Commit.png` | Shows that the same row becomes `VERIFIED` for the other session only after commit. |
+| `Ismail_Muhammed_301904296_Document_Query_Results.png` | Shows the document lookup, the pending-return list, and the live constituency total from one run. |
+
+Portfolio 5 has no screenshot. It is a design of zone primaries and a public replica. Three cloud regions were not created, so a console image would not be evidence of a deployment.
+
+## 8. Work carried out
 
 All practical work was run on PostgreSQL 16 in database `nerms`, using DBeaver, except the document queries, which were run with Python against the JSON file.
 
@@ -61,7 +86,7 @@ The document queries were run with `python3 Ismail_Muhammed_301904296_Document_Q
 
 A later connection failure was environmental. Port 5432 was taken by a Docker container named `femrs-postgres`. The NERMS tables were still in that server, with eighteen returns, but DBeaver could connect only as the role `postgres`. Reconnecting with that user restored the same database. The scripts did not need to be rewritten.
 
-## 8. Reflection
+## 9. Reflection
 
 Separating the return header from the candidate lines was the decision that held the later work together. The same figures supported the check constraint, the aggregation queries, the nested document, and the live total.
 
@@ -71,11 +96,11 @@ The index result taught a related lesson. An index is justified by the predicate
 
 The connection break taught me to separate the server from the schema. The portfolio survived because the tables and rows were still in `nerms`. Only the client login had changed.
 
-## 9. AI-use declaration
+## 10. AI-use declaration
 
 Cursor, using the Grok model, was used to draft the repository structure, SQL, JSON documents, query script, and the written notes. The generated schema, sample data, transaction script, and document queries were executed in PostgreSQL and the results were checked against the constraints and the expected rows. Screenshots were taken from those runs in DBeaver and from the Python query output. Where a draft did not match the database, it was corrected before it was kept. Examples are the rejected return, which must not store a verifier, and the winner query, which now ranks the computed total rather than repeating the aggregate. The student remains responsible for the accuracy of the work in this repository.
 
-## 10. References
+## 11. References
 
 PostgreSQL 16 documentation for `EXPLAIN`, transaction isolation, `lock_timeout`, and check constraints: https://www.postgresql.org/docs/16/
 

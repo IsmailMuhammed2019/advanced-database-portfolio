@@ -114,5 +114,30 @@ Folder: `portfolio-5-distributed-cloud/`
 - A zone primary for collation and a public replica that can lag
 - A deployment sketch. The local `nerms` database is the stand-in for one zone primary
 
+Portfolio 5 has no screenshot. It is a design, and three cloud regions were not provisioned.
+
 ---
+
+## Screenshots
+
+Each image is evidence of a run. The purpose is the result that image is there to prove.
+
+| Screenshot | Purpose |
+|---|---|
+| `portfolio-1-database-design/Ismail_Muhammed_301904296_ER_Diagram.png` | Confirms the tables and foreign keys created from the schema. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q1_Leading_candidate.png` | Candidate standings from the aggregation query. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q2_Winner.png` | One leading candidate in each constituency. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q3_Turn_Out.png` | Accredited voters compared with the registered roll. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q4_RWaiting_Verification.png` | Returns still waiting to be verified. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q5_Party_Totals.png` | National party totals from verified and certified returns. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q6_Vote_Sharing.png` | Party share inside each constituency. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q7_Audit_Trails.png` | Reject, correct, and certify actions kept in the audit log. |
+| `portfolio-2-query-optimisation/Ismail_Muhammed_301904296_Q8_Querry_Plan.png` | Execution plan behind the index discussion. |
+| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Commit_Return6.png` | Verification and audit row saved by one commit. |
+| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Rollback_Return13.png` | Uncommitted verification discarded. |
+| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Constraint_Rollback.png` | Illegal vote total rejected by the check constraint. |
+| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Isolation_Read.png` | Second session still sees `SUBMITTED` before the first session commits. |
+| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_Lock_Timeout.png` | Second update cancelled because the row is locked. |
+| `portfolio-3-transactions-concurrency/Ismail_Muhammed_301904296_After_Commit.png` | The other session sees `VERIFIED` only after commit. |
+| `portfolio-4-nosql/Ismail_Muhammed_301904296_Document_Query_Results.png` | One return document, the pending queue, and the live constituency total. |
 
