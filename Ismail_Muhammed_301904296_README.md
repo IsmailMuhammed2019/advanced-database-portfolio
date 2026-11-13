@@ -77,9 +77,13 @@ Completed. Commit, rollback, isolation, and row-lock evidence lives in `portfoli
 
 ### Portfolio 4 – NoSQL and Advanced Data Models
 
-Current stage. The same House election is modelled as documents so a polling-unit return, its candidate votes, and its audit notes can be stored and read as one nested record.
+Completed. Nested polling-unit documents, document queries, and the suitability note live in `portfolio-4-nosql/`.
 
-Work for this stage lives in `portfolio-4-nosql/`.
+### Portfolio 5 – Distributed and Cloud Databases
+
+Current stage. NERMS is placed across regional collation centres so a zone can keep accepting result returns when another zone is unreachable, and so published totals can be copied for public reads.
+
+Work for this stage lives in `portfolio-5-distributed-cloud/`.
 
 ```text
 advanced-database-portfolio/
@@ -87,6 +91,7 @@ advanced-database-portfolio/
 ├── portfolio-2-query-optimisation/
 ├── portfolio-3-transactions-concurrency/
 ├── portfolio-4-nosql/
+├── portfolio-5-distributed-cloud/
 └── Ismail_Muhammed_301904296_README.md
 ```
 
