@@ -34,7 +34,7 @@ A key-value record is also shown for the live constituency total, where the key 
 | `Ismail_Muhammed_301904296_Portfolio4_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_Result_Documents.json` | Sample result documents and one live-total record | Done |
 | `Ismail_Muhammed_301904296_Document_Queries.py` | Queries against the document collection | Done |
-| `Ismail_Muhammed_301904296_NoSQL_Suitability.md` | Why this model fits NERMS, and where the relational schema remains the better store | Pending |
+| `Ismail_Muhammed_301904296_NoSQL_Suitability.md` | Why this model fits NERMS, and where the relational schema remains the better store | Done |
 
 ---
 
@@ -50,6 +50,10 @@ A key-value record is also shown for the live constituency total, where the key 
 python3 Ismail_Muhammed_301904296_Document_Queries.py
 ```
 
-## Next Step
+## Suitability
 
-Add `Ismail_Muhammed_301904296_NoSQL_Suitability.md` explaining where the document model fits NERMS and where the relational schema remains the better store.
+`Ismail_Muhammed_301904296_NoSQL_Suitability.md` explains why a polling-unit document and a live-total key fit the results screen, and why PostgreSQL remains the store for checks, commits, and locks.
+
+## Status
+
+Portfolio 4 documents, queries, the query screenshot, and the suitability note are in place. The next project stage is Portfolio 5 – Distributed and Cloud Databases.
