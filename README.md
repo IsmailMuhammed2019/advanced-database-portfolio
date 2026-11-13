@@ -118,4 +118,4 @@ Folder: `portfolio-5-distributed-cloud/`
 
 ## Status
 
-The five portfolio folders are complete. The remaining piece is the final summary: this case study, the GitHub link, a short reflection, and an AI-use declaration.
+The five portfolio folders are complete. The final summary is `Ismail_Muhammed_301904296_Final_Summary.md`.
