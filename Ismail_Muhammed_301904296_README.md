@@ -81,9 +81,9 @@ Completed. Nested polling-unit documents, document queries, and the suitability 
 
 ### Portfolio 5 – Distributed and Cloud Databases
 
-Current stage. NERMS is placed across regional collation centres so a zone can keep accepting result returns when another zone is unreachable, and so published totals can be copied for public reads.
+Completed. Zone sharding, replication lag, and the deployment sketch live in `portfolio-5-distributed-cloud/`.
 
-Work for this stage lives in `portfolio-5-distributed-cloud/`.
+The five technical portfolios are in place. The remaining piece is the final summary: the case study, the GitHub link, a short reflection, and an AI-use declaration.
 
 ```text
 advanced-database-portfolio/

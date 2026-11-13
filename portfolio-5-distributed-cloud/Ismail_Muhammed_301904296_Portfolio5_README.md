@@ -33,7 +33,7 @@ The relational schema, transactions, and document publication copy from the earl
 |------|---------|--------|
 | `Ismail_Muhammed_301904296_Portfolio5_README.md` | This overview | Done |
 | `Ismail_Muhammed_301904296_Distribution_Design.md` | Sharding, replication, and the consistency choice for published results | Done |
-| `Ismail_Muhammed_301904296_Deployment_Sketch.md` | How the zone primary and the public replica would be deployed | Pending |
+| `Ismail_Muhammed_301904296_Deployment_Sketch.md` | How the zone primary and the public replica would be deployed | Done |
 
 ---
 
@@ -41,6 +41,10 @@ The relational schema, transactions, and document publication copy from the earl
 
 `Ismail_Muhammed_301904296_Distribution_Design.md` splits the sample election by zone. Each zone primary accepts returns and holds row locks. The public replica applies committed changes later, so a visitor can still see `SUBMITTED` after an officer has committed `VERIFIED`.
 
-## Next Step
+## Deployment
 
-Add `Ismail_Muhammed_301904296_Deployment_Sketch.md` describing where the zone primary and the public replica would run.
+`Ismail_Muhammed_301904296_Deployment_Sketch.md` places a PostgreSQL primary in each zone and a read-only replica in the national region. The local `nerms` database used for this portfolio is the single-node stand-in for one of those primaries.
+
+## Status
+
+Portfolio 5 design and deployment notes are in place. The remaining assessment piece is the final 2–3 page summary, with the GitHub link, a short reflection, and an AI-use declaration.
