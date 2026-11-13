@@ -5,7 +5,7 @@
 **Course:** MIT 8103 – Advanced Database Systems  
 **Case study:** National Election Results Management System (NERMS)  
 **Repository:** https://github.com/IsmailMuhammed2019/advanced-database-portfolio  
-**Branch:** `dev`
+**Branch:** `main`
 
 ---
 
